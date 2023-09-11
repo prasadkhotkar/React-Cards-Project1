@@ -3,6 +3,7 @@ import  "./data"
 import "./components/Tours"
 import Tours from "./components/Tours";
 import data from "./data";
+import "./index.css"
 
 const App = () => {
   const [tours,setTours]=useState(data)
@@ -15,12 +16,12 @@ const App = () => {
     return(
       <div className="refresh">
         <h2>NO Tours Left</h2>
-        <button onClick={()=>setTours(data)}>Refresh</button>
+        <button className="btn-white" onClick={()=>setTours(data)}>Refresh</button>
       </div>
     )
   }
   return(
-    <div>
+    <div className="App">
       <Tours tours={tours}  removeTour={removeTour}></Tours>
     </div>
   )

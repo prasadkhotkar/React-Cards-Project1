@@ -4,15 +4,15 @@ import Cards from './Cards'
 
 function Tours({tours,removeTour}) {
   return (
-    <div>
+    <div className='container'>
       <div>
-        <h2>Tours website</h2>
+        <h2 className='title'>Traveler's Journey</h2>
       </div>
-      <div>
+      <div className='cards'>
         {
           tours.map((tour)=>
           {
-            return <Cards {...tour} removeTour={removeTour}></Cards>
+            return <Cards {...tour} key={tour.id} removeTour={removeTour}></Cards>
           } )
         }
       </div>
